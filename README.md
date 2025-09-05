@@ -14,11 +14,31 @@ This project uses machine learning to predict mineral deposit likelihood using o
 
 The project includes a Streamlit web application for interactive visualization of the model outputs.
 
-To run the app:
+### Local Development
+
+To run the app locally:
 
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
 streamlit run app.py
 ```
+
+### Cloud Deployment
+
+The app is configured for deployment on Streamlit Community Cloud. The first run will automatically download demo data for demonstration purposes.
+
+**Live Demo**: [View the deployed app](https://your-app-name.streamlit.app) (link will be available after deployment)
+
+### App Features
+
+- Interactive model comparison (Bayesian vs Random Forest)
+- On-the-fly model training with feature selection
+- Geospatial visualization with Folium maps
+- Feature importance analysis
+- Probability distribution plots
 
 This will start a local web server and open the application in your browser. You can use the app to explore the predicted ore deposit likelihood and associated uncertainty.
 

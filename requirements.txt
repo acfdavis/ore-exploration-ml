@@ -1,0 +1,17 @@
+pandas
+numpy
+geopandas
+rasterio
+matplotlib
+scikit-learn
+requests
+pyproj
+shapely
+folium
+geopandas
+pymc
+arviz
+streamlit
+pydeck
+streamlit-folium
+nbconvert

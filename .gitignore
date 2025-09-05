@@ -1,0 +1,25 @@
+# Ignore large data files but keep source files
+data/raw/*.tif
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.met
+data/raw/*.gpkg
+data/processed/*.npy
+data/processed/*.joblib
+data/processed/*.csv
+data/processed/*.geojson
+data/processed/*.gpkg
+data/processed/*.txt
+models/*.joblib
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore environment files
+.env
+venv/
+*.env

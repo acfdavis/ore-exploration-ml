@@ -156,56 +156,6 @@ def download_real_data():
 
     print("Real data processing complete!")
 
-def download_demo_data():
-    """
-    Fallback demo data generation.
-    """
-    print("Creating demo data...")
-
-    # Create directories
-    data_dir = Path("data")
-    processed_dir = data_dir / "processed"
-    processed_dir.mkdir(parents=True, exist_ok=True)
-
-    # Create a simple grid
-    lons = np.linspace(-95, -89, 30)
-    lats = np.linspace(36, 40, 30)
-
-    points = []
-    for lat in lats:
-        for lon in lons:
-            points.append(Point(lon, lat))
-
-    grid = gpd.GeoDataFrame({'geometry': points}, crs='EPSG:4326')
-    joblib.dump(grid, processed_dir / "grid_gdf.joblib")
-
-    # Create feature data
-    n_points = len(grid)
-    np.random.seed(42)
-
-    coords = np.column_stack([np.array(grid.geometry.x.values), np.array(grid.geometry.y.values)])
-    np.save(processed_dir / "X_coords.npy", coords)
-
-    features = {
-        'X_geo': np.random.randn(n_points, 5),
-        'X_gravity': np.random.randn(n_points, 1),
-        'X_geochem': np.random.randn(n_points, 10),
-        'X_mag': np.random.randn(n_points, 3)
-    }
-
-    for name, data in features.items():
-        np.save(processed_dir / f"{name}.npy", data)
-
-    # Create labels
-    y = np.random.binomial(1, 0.1, n_points)
-    np.save(processed_dir / "y_labels.npy", y)
-
-    # Create model outputs
-    probs = np.random.beta(2, 5, n_points)
-    np.save(processed_dir / "mean_probs.npy", probs)
-    np.save(processed_dir / "std_probs.npy", probs * 0.1)
-
-    print("Demo data created successfully!")
 
 def main():
     """
@@ -217,9 +167,7 @@ def main():
         download_real_data()
         print("Data setup process complete.")
     except Exception as e:
-        print(f"Error during real data setup: {e}")
-        print("Falling back to demo data...")
-        download_demo_data()
+        print(f"Error during data setup: {e}")
 
 if __name__ == "__main__":
     main()

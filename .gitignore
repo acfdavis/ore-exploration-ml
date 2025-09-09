@@ -1,15 +1,32 @@
-# Ignore large data files but keep source files
-data/raw/*.tif
-data/raw/*.csv
-data/raw/*.zip
-data/raw/*.met
-data/raw/*.gpkg
+############################################
+# Data (prefer small, app-ready artifacts) #
+############################################
+
+# Raw data (not needed to run app_v2)
+data/raw/**
+
+# Processed: ignore by default, then explicitly include what the app needs
 data/processed/*.npy
 data/processed/*.joblib
 data/processed/*.csv
 data/processed/*.geojson
 data/processed/*.gpkg
 data/processed/*.txt
+
+# Include required grid + features
+!data/processed/grid_gdf.joblib
+!data/processed/X_*.npy
+!data/processed/y_labels_*.npy
+!data/processed/feature_names_*.json
+
+# Include optional precomputed predictions and app side-data
+!data/processed/rf_probs_*.npy
+!data/processed/bayes_mean_*.npy
+!data/processed/bayes_std_*.npy
+!data/processed/rf_importances_*.csv
+!data/processed/targets_*.csv
+
+# Models not used by app_v2
 models/*.joblib
 
 # Ignore Python cache and compiled files

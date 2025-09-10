@@ -1,105 +1,173 @@
-# Mineral Exploration with Machine Learning
+# Critical Mineral Prospectivity (Geospatial ML Pipeline)
 
-This project uses machine learning to predict mineral deposit likelihood using open-source geospatial data. It serves as a demonstration of a complete geospatial ML pipeline, from data ingestion and feature engineering to model training and visualization.
+This repository demonstrates an end‑to‑end geospatial machine learning workflow for critical mineral prospectivity (Ni / Co / Li / Cu + combined “Crit”). It includes: reproducible data assembly, feature engineering over a unified grid, model training (Random Forest + Bayesian Logistic Regression), precomputation scripts, and a streamlined Streamlit demo app (`app_v2.py`).
 
-## Features
+## Highlighted Capabilities
 
-- **Data Ingestion**: Programmatically downloads and processes mineral occurrence data from the USGS, along with other geospatial datasets (geology, gravity, magnetics).
-- **Feature Engineering**: Creates a comprehensive feature set for modeling by integrating various data sources onto a single grid.
-- **Machine Learning Models**: Implements several models to predict mineralization, including Random Forest and Bayesian Logistic Regression.
-- **Interactive Web App**: A Streamlit application (`app.py`) for visualizing model predictions and uncertainty.
-- **Reproducibility**: The entire workflow is captured in a series of Jupyter notebooks and Python scripts.
+- **Automated Data Pipeline** (notebooks `00`–`02x`): downloads, cleans, and grids raw geology / geochem / gravity / magnetics + MRDS occurrences.
+- **Unified Grid Feature Stack**: geology categorical fractions, gravity & gradient, magnetics bands, geochemical signal features, spatial coordinates.
+- **Models**:
+   - Random Forest (balanced, calibrated offline) with feature importances.
+   - Bayesian Logistic Regression (PyMC) for posterior mean & uncertainty.
+- **Target Shortlisting**: Ranking filtered by Bayesian uncertainty quantile → top high‑confidence cells per mineral.
+- **Precomputation Script**: `scripts/precompute_predictions.py` produces ready‑to‑serve arrays (RF probs, Bayesian mean/std, importances, targets).
+- **Demo App**: `app_v2.py` fast interface (precomputed layers + optional on‑the‑fly RF retrain, feature panels, targets table).
+- **Reproducibility**: Deterministic seeds; complete provenance in notebooks & scripts.
 
-## Web App
+## Running the Streamlit App
 
-The project includes a Streamlit web application for interactive visualization of the model outputs.
+Two paths:
 
-### Local Development
-
-To run the app locally:
+### 1. Use Precomputed Artifacts (FAST – recommended)
+Clone & install, then run the lean app:
 
 ```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Run the app
-streamlit run app.py
+streamlit run app_v2.py
 ```
 
-### Cloud Deployment
+Works if required processed files already exist under `data/processed/` (see “Required Artifacts”).
 
-The app is configured for deployment on Streamlit Community Cloud. The first run will automatically download demo data for demonstration purposes.
+### 2. Regenerate Everything (FULL PIPELINE)
+Execute the master notebook which orchestrates the others and finally calls the precompute script:
 
-**Live Demo**: [View the deployed app](https://your-app-name.streamlit.app) (link will be available after deployment)
+```bash
+jupyter lab  # or jupyter notebook
+# Open and run: notebooks/00_run_pipeline.ipynb (runs 01..02x + precompute)
+```
 
-### App Features
+This repopulates `data/processed/` then you can launch:
 
-- Interactive model comparison (Bayesian vs Random Forest)
-- On-the-fly model training with feature selection
-- Geospatial visualization with Folium maps
-- Feature importance analysis
-- Probability distribution plots
+```bash
+streamlit run app_v2.py
+```
 
-This will start a local web server and open the application in your browser. You can use the app to explore the predicted ore deposit likelihood and associated uncertainty.
+### What `app_v2.py` Provides
 
-## Quickstart
+| Mode | Layers | Notes |
+|------|--------|-------|
+| Model | Precomputed RF, Bayesian Mean, Bayesian Uncertainty, On‑the‑fly RF | Precomputed ignore feature toggles; on‑the‑fly can subset feature groups |
+| Feature Panel | Geology, Gravity (+ gradient), Geochemistry, Magnetics | Static derived maps; optional target overlay |
 
-1. **Clone the repository:**
+Additional Sidebar Items: target overlay, boundary clipping, feature importances (live + precomputed), histogram (log‑transformed values), data source references.
 
-   ```bash
-   git clone https://github.com/acfdavis/ore-exploration-ml.git
-   cd ore-exploration-ml
-   ```
+## Quickstart (Concise)
 
-2. **Set up the environment:**
+```bash
+git clone https://github.com/acfdavis/ore-exploration-ml.git
+cd ore-exploration-ml
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app_v2.py
+```
 
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
-   pip install -r requirements.txt
-   ```
+If missing processed artifacts, run the pipeline notebook or manually run:
 
-3. **Run the notebooks:**
-   Execute the Jupyter notebooks in the `notebooks/` directory in numerical order to download data, engineer features, and train the models.
+```bash
+python scripts/precompute_predictions.py --force   # after generating grid + features + labels
+```
 
-4. **Run the web app:**
-
-   ```bash
-   streamlit run app.py
-   ```
-
-## Repo Layout
+## Repository Layout (Simplified)
 
 ```text
 ore-exploration-ml/
-├── app.py                # Streamlit web application
+├── app_v2.py                # Streamlined demo app (primary)
+├── app.py                   # Original prototype app (legacy)
+├── scripts/
+│   └── precompute_predictions.py  # Batch RF + Bayesian + shortlist + importances
+├── notebooks/               # 00 master + 01..06 thematic notebooks
+├── src/                     # app_* helpers, feature logic, utilities
 ├── data/
-│   ├── raw/              # Raw downloaded data
-│   └── processed/        # Processed data and features
-├── figures/              # Saved figures and maps
-├── models/               # Trained model files
-├── notebooks/            # Jupyter notebooks for the analysis
-├── src/                  # Python source code
-├── tests/                # Unit tests
-├── requirements.txt      # Python dependencies
+│   ├── raw/                 # Large source datasets (ignored in Git)
+│   └── processed/           # Grid, features, labels, predictions (whitelisted subset)
+├── figures/                 # Exported static figures
+├── tests/                   # Unit tests (core utilities & models)
+├── requirements.txt
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
 
-## Data Sources
+## Required Artifacts for `app_v2.py`
 
-- **USGS Mineral Resource Data System (MRDS)**: Primary source for mineral occurrences.
-- **State Geologic Map Compilation (SGMC)**: For bedrock geology features.
-- **Gravity and Magnetic Data**: From various public sources.
+Minimum (per mineral or combined crit):
 
-## Example Outputs
+- `data/processed/grid_gdf.joblib`
+- `data/processed/X_coords.npy`
+- Feature arrays: `X_geo.npy`, `X_geochem.npy`, `X_gravity.npy`, `X_gravity_grad.npy`, `X_mag.npy`
+- Feature name JSON: `feature_names_geo.json`, `feature_names_geochem.json`, `feature_names_mag.json`
+- Labels: `y_labels_crit.npy` (or `y_labels_<mineral>.npy` for ni / co / li / cu)
 
-The analysis generates several outputs, including:
+Optional (enables richer panels / metrics):
 
-- **Probability Maps**: Heatmaps showing the likelihood of mineral deposits.
-- **Uncertainty Maps**: Visualizations of the model's uncertainty in its predictions.
-- **Feature Importance Plots**: Insights into which features are most predictive.
+- RF probs: `rf_probs_<mineral>.npy`
+- Bayesian: `bayes_mean_<mineral>.npy`, `bayes_std_<mineral>.npy`
+- RF importances: `rf_importances_<mineral>.csv`
+- Shortlist: `targets_<mineral>.csv`
+- Boundary clipping (if desired): `data/raw/state_geology.gpkg`
 
-These outputs are saved in the `figures/` directory and can be explored interactively in the web app.
+If any optional file is absent, the app degrades gracefully (layer or table simply omitted).
+
+## Precomputation Script Usage
+
+```bash
+python scripts/precompute_predictions.py            # Normal (includes Bayesian)
+python scripts/precompute_predictions.py --fast-bayes  # Skip Bayesian + fewer RF trees
+python scripts/precompute_predictions.py --force       # Recompute even if outputs exist
+```
+
+Artifacts written to `data/processed/`.
+
+## Data Sources (Public / Open)
+
+| Domain | Source | Link |
+|--------|--------|------|
+| Mineral Occurrences | USGS MRDS | <https://mrdata.usgs.gov/mrds/> |
+| Geology | State Geologic Map Compilation (SGMC) | <https://pubs.usgs.gov/ds/1052/> |
+| Geochemistry | National Geochemical Database | <https://mrdata.usgs.gov/geochemistry/> |
+| Gravity | USGS / NOAA (Isostatic / Bouguer Grids) | <https://www.ngdc.noaa.gov/mgg/gravity/> |
+| Magnetics | North American Magnetic Anomaly Grid | <https://pubs.usgs.gov/of/2009/1258/> |
+
+All preprocessing standardizes coordinate reference systems and raster/vector alignment to the project grid.
+
+## Outputs
+
+- Probability maps (RF + Bayesian mean) per mineral
+- Uncertainty maps (Bayesian std)
+- RF feature importances (global, impurity-based)
+- Target shortlist CSVs (rank + RF prob + Bayesian stats)
+- Static geology / gravity / geochem / magnetics panels
+- Summary metadata (`labels_meta.txt`)
+
+## Git & Large Files
+
+Raw data are excluded via `.gitignore`. If you intend to share processed predictions, consider using **Git LFS** for: `*.npy`, `*.joblib`, `*.gpkg`, large rasters, and figures. Example `.gitattributes` entries:
+
+```text
+data/processed/*.npy filter=lfs diff=lfs merge=lfs -text
+data/processed/*.joblib filter=lfs diff=lfs merge=lfs -text
+data/**/*.gpkg filter=lfs diff=lfs merge=lfs -text
+figures/*.png filter=lfs diff=lfs merge=lfs -text
+```
+
+## Testing
+
+Run minimal unit tests:
+ 
+```bash
+pytest -q
+```
+
+## License
+
+MIT License – see `LICENSE` file.
+
+## Acknowledgements
+
+All underlying datasets are credited to their respective USGS / NOAA publishers. Bayesian modeling uses PyMC; geospatial operations use GeoPandas/Shapely; visualization layers via Folium/Matplotlib/Streamlit.
+
+---
+Questions or improvements? Open an issue or submit a PR.
 
 

@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_731d32a9e827fa36a22c71107f541863 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_731d32a9e827fa36a22c71107f541863" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_731d32a9e827fa36a22c71107f541863 = L.map(
+                "map_731d32a9e827fa36a22c71107f541863",
+                {
+                    center: [37.798603018697094, -91.05835509167886],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8d20fb42464187824ee8d4a992740475 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8d20fb42464187824ee8d4a992740475.addTo(map_731d32a9e827fa36a22c71107f541863);
+        
+    
+            var marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_21e480570631236b4a3d779c22be2442 = L.circleMarker(
+                [38.12060301869706, -90.59935509167887],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.201844199425553, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_1c30735f84c62daf3d30213e83fc7e55 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_76cc4884c4ca2e2ef3b79adccb2acf71 = $(`<div id="html_76cc4884c4ca2e2ef3b79adccb2acf71" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 1<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.074<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.038<br>     <b>Lon, Lat:</b> -90.5994, 38.1206     </div>`)[0];
+                popup_1c30735f84c62daf3d30213e83fc7e55.setContent(html_76cc4884c4ca2e2ef3b79adccb2acf71);
+            
+        
+
+        circle_marker_21e480570631236b4a3d779c22be2442.bindPopup(popup_1c30735f84c62daf3d30213e83fc7e55)
+        ;
+
+        
+    
+    
+            var circle_marker_1807635fd80c24b3e0403881fe4e97fc = L.circleMarker(
+                [36.870603018697146, -90.4493550916789],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.7420786925870906, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_0d5ffab9f69d3e529353dbff34df40f8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4d15ef33c61fab15d01d9f2412ffc5ce = $(`<div id="html_4d15ef33c61fab15d01d9f2412ffc5ce" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 2<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.094<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.013<br>     <b>Lon, Lat:</b> -90.4494, 36.8706     </div>`)[0];
+                popup_0d5ffab9f69d3e529353dbff34df40f8.setContent(html_4d15ef33c61fab15d01d9f2412ffc5ce);
+            
+        
+
+        circle_marker_1807635fd80c24b3e0403881fe4e97fc.bindPopup(popup_0d5ffab9f69d3e529353dbff34df40f8)
+        ;
+
+        
+    
+    
+            var circle_marker_da2aaedfc728e7309a77f81651c8087a = L.circleMarker(
+                [38.77060301869703, -90.84935509167887],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.944834923923157, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_207ed97314f4d899263d95eb6df173ba = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ea3585c53debdd539c26e8397133b57a = $(`<div id="html_ea3585c53debdd539c26e8397133b57a" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 3<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.039<br>     <b>Bayes std:</b> 0.007<br>     <b>Score (p × (1-σ)):</b> 0.155<br>     <b>Lon, Lat:</b> -90.8494, 38.7706     </div>`)[0];
+                popup_207ed97314f4d899263d95eb6df173ba.setContent(html_ea3585c53debdd539c26e8397133b57a);
+            
+        
+
+        circle_marker_da2aaedfc728e7309a77f81651c8087a.bindPopup(popup_207ed97314f4d899263d95eb6df173ba)
+        ;
+
+        
+    
+    
+            var circle_marker_c00b4c16798ebbc0a784751401b67cb6 = L.circleMarker(
+                [36.72060301869715, -90.4493550916789],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.141591371987822, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_cd2f3d84a45b93cc5174ece1ff3f3747 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_0ae36ceace76af5eceebff1d3af35004 = $(`<div id="html_0ae36ceace76af5eceebff1d3af35004" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 4<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.089<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.054<br>     <b>Lon, Lat:</b> -90.4494, 36.7206     </div>`)[0];
+                popup_cd2f3d84a45b93cc5174ece1ff3f3747.setContent(html_0ae36ceace76af5eceebff1d3af35004);
+            
+        
+
+        circle_marker_c00b4c16798ebbc0a784751401b67cb6.bindPopup(popup_cd2f3d84a45b93cc5174ece1ff3f3747)
+        ;
+
+        
+    
+    
+            var circle_marker_d817722dcb2b9be078affd71714773ff = L.circleMarker(
+                [37.02060301869713, -90.54935509167888],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.17857001371042, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_1c6093d0b09d9dc34739dc7605a2dd65 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2aefeaab8a7673164b2d3e7249f105f8 = $(`<div id="html_2aefeaab8a7673164b2d3e7249f105f8" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 5<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.100<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.038<br>     <b>Lon, Lat:</b> -90.5494, 37.0206     </div>`)[0];
+                popup_1c6093d0b09d9dc34739dc7605a2dd65.setContent(html_2aefeaab8a7673164b2d3e7249f105f8);
+            
+        
+
+        circle_marker_d817722dcb2b9be078affd71714773ff.bindPopup(popup_1c6093d0b09d9dc34739dc7605a2dd65)
+        ;
+
+        
+    
+    
+            var circle_marker_91649a29374ea1563618fd5049879b2d = L.circleMarker(
+                [36.92060301869713, -90.4993550916789],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.033443059217731, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_9978e275990f4544036590e1e5385ac4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_68574878fed36f87bae382b3e9b199d2 = $(`<div id="html_68574878fed36f87bae382b3e9b199d2" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 6<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.098<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.035<br>     <b>Lon, Lat:</b> -90.4994, 36.9206     </div>`)[0];
+                popup_9978e275990f4544036590e1e5385ac4.setContent(html_68574878fed36f87bae382b3e9b199d2);
+            
+        
+
+        circle_marker_91649a29374ea1563618fd5049879b2d.bindPopup(popup_9978e275990f4544036590e1e5385ac4)
+        ;
+
+        
+    
+    
+            var circle_marker_205c429eda645f4e51e0635803a2d88c = L.circleMarker(
+                [36.97060301869713, -90.54935509167888],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.309230804294799, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_fc5628b3fb2aabe9918cf94630ceaec9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_27be0025baff3ff03d5590b781e04495 = $(`<div id="html_27be0025baff3ff03d5590b781e04495" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 7<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.095<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.057<br>     <b>Lon, Lat:</b> -90.5494, 36.9706     </div>`)[0];
+                popup_fc5628b3fb2aabe9918cf94630ceaec9.setContent(html_27be0025baff3ff03d5590b781e04495);
+            
+        
+
+        circle_marker_205c429eda645f4e51e0635803a2d88c.bindPopup(popup_fc5628b3fb2aabe9918cf94630ceaec9)
+        ;
+
+        
+    
+    
+            var circle_marker_0f58814e1bc6350ad42afa1c8be31ee0 = L.circleMarker(
+                [37.07060301869713, -90.99935509167884],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.268177539134663, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_d6e41db65550639b1d3c88b1151a294f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ea48104b91da0e8c12d8e3d98a2a14a8 = $(`<div id="html_ea48104b91da0e8c12d8e3d98a2a14a8" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 8<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.080<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.074<br>     <b>Lon, Lat:</b> -90.9994, 37.0706     </div>`)[0];
+                popup_d6e41db65550639b1d3c88b1151a294f.setContent(html_ea48104b91da0e8c12d8e3d98a2a14a8);
+            
+        
+
+        circle_marker_0f58814e1bc6350ad42afa1c8be31ee0.bindPopup(popup_d6e41db65550639b1d3c88b1151a294f)
+        ;
+
+        
+    
+    
+            var circle_marker_8a4d17ea16d6bd047cd2b71b35a8d0d6 = L.circleMarker(
+                [37.02060301869713, -90.99935509167884],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.956898025980669, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_a87ccb4253fb955ca908ce7adb4ee4fd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bd2fddb68a317d714497570f68fd35a3 = $(`<div id="html_bd2fddb68a317d714497570f68fd35a3" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 9<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.087<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.068<br>     <b>Lon, Lat:</b> -90.9994, 37.0206     </div>`)[0];
+                popup_a87ccb4253fb955ca908ce7adb4ee4fd.setContent(html_bd2fddb68a317d714497570f68fd35a3);
+            
+        
+
+        circle_marker_8a4d17ea16d6bd047cd2b71b35a8d0d6.bindPopup(popup_a87ccb4253fb955ca908ce7adb4ee4fd)
+        ;
+
+        
+    
+    
+            var circle_marker_7eaf435593a086188e0d941e4e48bbeb = L.circleMarker(
+                [36.67060301869715, -90.4993550916789],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0585147304448332, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_c72a4eee9c408e067714fe6b508f4ab3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_5a05a1a9196690294f770207551180bd = $(`<div id="html_5a05a1a9196690294f770207551180bd" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 10<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.085<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.001<br>     <b>Lon, Lat:</b> -90.4994, 36.6706     </div>`)[0];
+                popup_c72a4eee9c408e067714fe6b508f4ab3.setContent(html_5a05a1a9196690294f770207551180bd);
+            
+        
+
+        circle_marker_7eaf435593a086188e0d941e4e48bbeb.bindPopup(popup_c72a4eee9c408e067714fe6b508f4ab3)
+        ;
+
+        
+    
+    
+            var circle_marker_ea2324c3d8f0c37e10a40069305d272f = L.circleMarker(
+                [38.42060301869705, -90.84935509167887],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.654355443367438, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_ce07d9088a2d43433781b94f3987c543 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cb31bc9e946558bde9f40ccab0794e26 = $(`<div id="html_cb31bc9e946558bde9f40ccab0794e26" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 11<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.131<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.011<br>     <b>Lon, Lat:</b> -90.8494, 38.4206     </div>`)[0];
+                popup_ce07d9088a2d43433781b94f3987c543.setContent(html_cb31bc9e946558bde9f40ccab0794e26);
+            
+        
+
+        circle_marker_ea2324c3d8f0c37e10a40069305d272f.bindPopup(popup_ce07d9088a2d43433781b94f3987c543)
+        ;
+
+        
+    
+    
+            var circle_marker_c55627f696184d0ed11df46aec1a3ddf = L.circleMarker(
+                [37.92060301869708, -90.54935509167888],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.6898571701467695, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_cac3ed73748e20c88b166471bd5c5c5d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_40c575ceef5abae43531c4e512ae1f59 = $(`<div id="html_40c575ceef5abae43531c4e512ae1f59" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 12<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.085<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.029<br>     <b>Lon, Lat:</b> -90.5494, 37.9206     </div>`)[0];
+                popup_cac3ed73748e20c88b166471bd5c5c5d.setContent(html_40c575ceef5abae43531c4e512ae1f59);
+            
+        
+
+        circle_marker_c55627f696184d0ed11df46aec1a3ddf.bindPopup(popup_cac3ed73748e20c88b166471bd5c5c5d)
+        ;
+
+        
+    
+    
+            var circle_marker_39057b48f6acad06870b45734bde378f = L.circleMarker(
+                [37.820603018697085, -90.54935509167888],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.556874903893864, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_633e35720f8eacf1b072a2ae27f15273 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3a23d3798d1be3c32dd417aad2661c41 = $(`<div id="html_3a23d3798d1be3c32dd417aad2661c41" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 13<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.093<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.010<br>     <b>Lon, Lat:</b> -90.5494, 37.8206     </div>`)[0];
+                popup_633e35720f8eacf1b072a2ae27f15273.setContent(html_3a23d3798d1be3c32dd417aad2661c41);
+            
+        
+
+        circle_marker_39057b48f6acad06870b45734bde378f.bindPopup(popup_633e35720f8eacf1b072a2ae27f15273)
+        ;
+
+        
+    
+    
+            var circle_marker_6f91967dfb64efae4822e7dd84238d0a = L.circleMarker(
+                [37.87060301869708, -90.59935509167887],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.955196761936286, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_498b2bf2c0e6e5dddbfc5f2ab16842a0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_17f6b727ffcc833eee34f2a0131b1bc7 = $(`<div id="html_17f6b727ffcc833eee34f2a0131b1bc7" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 14<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.097<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.017<br>     <b>Lon, Lat:</b> -90.5994, 37.8706     </div>`)[0];
+                popup_498b2bf2c0e6e5dddbfc5f2ab16842a0.setContent(html_17f6b727ffcc833eee34f2a0131b1bc7);
+            
+        
+
+        circle_marker_6f91967dfb64efae4822e7dd84238d0a.bindPopup(popup_498b2bf2c0e6e5dddbfc5f2ab16842a0)
+        ;
+
+        
+    
+    
+            var circle_marker_2c56f6ed9513766e61effd9ee7219039 = L.circleMarker(
+                [38.67060301869704, -90.89935509167886],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.9203446103251354, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_7b7d83c71876978b25b4dacc304d54d6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9780a8522a0b73d63bb1eb9fc9538c91 = $(`<div id="html_9780a8522a0b73d63bb1eb9fc9538c91" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 15<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.081<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.016<br>     <b>Lon, Lat:</b> -90.8994, 38.6706     </div>`)[0];
+                popup_7b7d83c71876978b25b4dacc304d54d6.setContent(html_9780a8522a0b73d63bb1eb9fc9538c91);
+            
+        
+
+        circle_marker_2c56f6ed9513766e61effd9ee7219039.bindPopup(popup_7b7d83c71876978b25b4dacc304d54d6)
+        ;
+
+        
+    
+    
+            var circle_marker_f612fff21ddda57c684e2611d0bfc569 = L.circleMarker(
+                [36.82060301869714, -90.3993550916789],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.5982306623544678, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_8ffaee7ecd1238c19f7ab5fc0358da29 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b7a840981fe5120a0603c39293100f23 = $(`<div id="html_b7a840981fe5120a0603c39293100f23" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 16<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.097<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.010<br>     <b>Lon, Lat:</b> -90.3994, 36.8206     </div>`)[0];
+                popup_8ffaee7ecd1238c19f7ab5fc0358da29.setContent(html_b7a840981fe5120a0603c39293100f23);
+            
+        
+
+        circle_marker_f612fff21ddda57c684e2611d0bfc569.bindPopup(popup_8ffaee7ecd1238c19f7ab5fc0358da29)
+        ;
+
+        
+    
+    
+            var circle_marker_045bed667982c915b8950e3bbe4a3bd2 = L.circleMarker(
+                [36.770603018697145, -90.3993550916789],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.76269645695003, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_f93632475e18a9e60dc7597ff369d804 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_586424815d50f16536e2999cd68487a0 = $(`<div id="html_586424815d50f16536e2999cd68487a0" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 17<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.098<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.048<br>     <b>Lon, Lat:</b> -90.3994, 36.7706     </div>`)[0];
+                popup_f93632475e18a9e60dc7597ff369d804.setContent(html_586424815d50f16536e2999cd68487a0);
+            
+        
+
+        circle_marker_045bed667982c915b8950e3bbe4a3bd2.bindPopup(popup_f93632475e18a9e60dc7597ff369d804)
+        ;
+
+        
+    
+    
+            var circle_marker_93099ec56af5e730a7409f2cc59610cf = L.circleMarker(
+                [37.32060301869711, -89.49935509167894],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.678744592841742, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_320f81940ea698326978ebb83c280f27 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_781eff2ca68dba2af9a0c9ddd4676033 = $(`<div id="html_781eff2ca68dba2af9a0c9ddd4676033" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 18<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.040<br>     <b>Bayes std:</b> 0.009<br>     <b>Score (p × (1-σ)):</b> 0.098<br>     <b>Lon, Lat:</b> -89.4994, 37.3206     </div>`)[0];
+                popup_320f81940ea698326978ebb83c280f27.setContent(html_781eff2ca68dba2af9a0c9ddd4676033);
+            
+        
+
+        circle_marker_93099ec56af5e730a7409f2cc59610cf.bindPopup(popup_320f81940ea698326978ebb83c280f27)
+        ;
+
+        
+    
+    
+            var circle_marker_b3d8b54486e59ae7840c2497acb109e7 = L.circleMarker(
+                [37.5706030186971, -89.59935509167893],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.167705288078287, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_3d9996126b0a392a48eefcca274cccae = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e15efaf737c27b450039b42cac7a8fec = $(`<div id="html_e15efaf737c27b450039b42cac7a8fec" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 19<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.051<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.072<br>     <b>Lon, Lat:</b> -89.5994, 37.5706     </div>`)[0];
+                popup_3d9996126b0a392a48eefcca274cccae.setContent(html_e15efaf737c27b450039b42cac7a8fec);
+            
+        
+
+        circle_marker_b3d8b54486e59ae7840c2497acb109e7.bindPopup(popup_3d9996126b0a392a48eefcca274cccae)
+        ;
+
+        
+    
+    
+            var circle_marker_c9d5efbe9ba473c8e3a674589bbcbdde = L.circleMarker(
+                [37.37060301869711, -89.59935509167893],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.558758993619758, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_b2b9fc324598b4d475ece3838c10dd5a = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6002fa50b9ab8978f8913dfed10bf53c = $(`<div id="html_6002fa50b9ab8978f8913dfed10bf53c" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 20<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.046<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.079<br>     <b>Lon, Lat:</b> -89.5994, 37.3706     </div>`)[0];
+                popup_b2b9fc324598b4d475ece3838c10dd5a.setContent(html_6002fa50b9ab8978f8913dfed10bf53c);
+            
+        
+
+        circle_marker_c9d5efbe9ba473c8e3a674589bbcbdde.bindPopup(popup_b2b9fc324598b4d475ece3838c10dd5a)
+        ;
+
+        
+    
+    
+            var circle_marker_2e24d750e5db1ea473b9f4b5db8ebf17 = L.circleMarker(
+                [37.5706030186971, -89.69935509167894],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.238467823568047, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_d92be32565091350e3d22e167bcb6436 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_80b10fcf9748ef361017ab57ea3003a9 = $(`<div id="html_80b10fcf9748ef361017ab57ea3003a9" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 21<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.043<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.073<br>     <b>Lon, Lat:</b> -89.6994, 37.5706     </div>`)[0];
+                popup_d92be32565091350e3d22e167bcb6436.setContent(html_80b10fcf9748ef361017ab57ea3003a9);
+            
+        
+
+        circle_marker_2e24d750e5db1ea473b9f4b5db8ebf17.bindPopup(popup_d92be32565091350e3d22e167bcb6436)
+        ;
+
+        
+    
+    
+            var circle_marker_937016d02fefd08507b932337238f3ec = L.circleMarker(
+                [36.82060301869714, -89.9993550916789],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.120606185065085, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_9ad5fc17e47ad3f270733d6c2d461f32 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7357429ae4592472bdd9f368c54bdb64 = $(`<div id="html_7357429ae4592472bdd9f368c54bdb64" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 22<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.987<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.019<br>     <b>Lon, Lat:</b> -89.9994, 36.8206     </div>`)[0];
+                popup_9ad5fc17e47ad3f270733d6c2d461f32.setContent(html_7357429ae4592472bdd9f368c54bdb64);
+            
+        
+
+        circle_marker_937016d02fefd08507b932337238f3ec.bindPopup(popup_9ad5fc17e47ad3f270733d6c2d461f32)
+        ;
+
+        
+    
+    
+            var circle_marker_678bc3c0c830f650492f2200fcea0ea5 = L.circleMarker(
+                [37.97060301869708, -90.09935509167892],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.066409962104619, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_5e74241175bbdcd719cb5dab5fa8c979 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_bc6c9aeebc652254f1185e8bce1f8515 = $(`<div id="html_bc6c9aeebc652254f1185e8bce1f8515" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 23<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.058<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.070<br>     <b>Lon, Lat:</b> -90.0994, 37.9706     </div>`)[0];
+                popup_5e74241175bbdcd719cb5dab5fa8c979.setContent(html_bc6c9aeebc652254f1185e8bce1f8515);
+            
+        
+
+        circle_marker_678bc3c0c830f650492f2200fcea0ea5.bindPopup(popup_5e74241175bbdcd719cb5dab5fa8c979)
+        ;
+
+        
+    
+    
+            var circle_marker_bcfc72a85b745c6343cd2358fd2a0274 = L.circleMarker(
+                [38.62060301869704, -90.29935509167892],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.298339578580828, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_43b594072fc2122e20f92bcc0c05bd9c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8f61d8525cc9b6fdb15ba37536ee4e52 = $(`<div id="html_8f61d8525cc9b6fdb15ba37536ee4e52" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 24<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.053<br>     <b>Bayes std:</b> 0.009<br>     <b>Score (p × (1-σ)):</b> 0.109<br>     <b>Lon, Lat:</b> -90.2994, 38.6206     </div>`)[0];
+                popup_43b594072fc2122e20f92bcc0c05bd9c.setContent(html_8f61d8525cc9b6fdb15ba37536ee4e52);
+            
+        
+
+        circle_marker_bcfc72a85b745c6343cd2358fd2a0274.bindPopup(popup_43b594072fc2122e20f92bcc0c05bd9c)
+        ;
+
+        
+    
+    
+            var circle_marker_bd90fe57265a36108a7b61e22c4ebc4b = L.circleMarker(
+                [36.97060301869713, -90.34935509167887],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.5555329841342487, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_6cb47c05c5448004534f3ea6e170db6f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fb8e6e3a476cd4cd58b74a509b8d13ed = $(`<div id="html_fb8e6e3a476cd4cd58b74a509b8d13ed" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 25<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.098<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.010<br>     <b>Lon, Lat:</b> -90.3494, 36.9706     </div>`)[0];
+                popup_6cb47c05c5448004534f3ea6e170db6f.setContent(html_fb8e6e3a476cd4cd58b74a509b8d13ed);
+            
+        
+
+        circle_marker_bd90fe57265a36108a7b61e22c4ebc4b.bindPopup(popup_6cb47c05c5448004534f3ea6e170db6f)
+        ;
+
+        
+    
+    
+            var circle_marker_a63ba0eb12e53b68393bb9c3711afa57 = L.circleMarker(
+                [36.82060301869714, -90.34935509167887],
+                {"bubblingMouseEvents": true, "color": "#fde725", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fde725", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.652160130389499, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_da9359b5a62028df385489240e492ed5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1e8f65c751be6cf23a100a533ab12773 = $(`<div id="html_1e8f65c751be6cf23a100a533ab12773" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 26<br>     <b>RF prob:</b> 0.178<br>     <b>Bayes mean:</b> 0.087<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.063<br>     <b>Lon, Lat:</b> -90.3494, 36.8206     </div>`)[0];
+                popup_da9359b5a62028df385489240e492ed5.setContent(html_1e8f65c751be6cf23a100a533ab12773);
+            
+        
+
+        circle_marker_a63ba0eb12e53b68393bb9c3711afa57.bindPopup(popup_da9359b5a62028df385489240e492ed5)
+        ;
+
+        
+    
+    
+            var circle_marker_c65dc6f1b915aa0bd599fd7c75705c95 = L.circleMarker(
+                [37.07060301869713, -91.04935509167883],
+                {"bubblingMouseEvents": true, "color": "#228c8d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#228c8d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.264470388470247, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_631d8c45d8a3d4eff53125c510eb2112 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_05e70ac1d9b18960a3335ca5ace50688 = $(`<div id="html_05e70ac1d9b18960a3335ca5ace50688" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 27<br>     <b>RF prob:</b> 0.166<br>     <b>Bayes mean:</b> 0.082<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.039<br>     <b>Lon, Lat:</b> -91.0494, 37.0706     </div>`)[0];
+                popup_631d8c45d8a3d4eff53125c510eb2112.setContent(html_05e70ac1d9b18960a3335ca5ace50688);
+            
+        
+
+        circle_marker_c65dc6f1b915aa0bd599fd7c75705c95.bindPopup(popup_631d8c45d8a3d4eff53125c510eb2112)
+        ;
+
+        
+    
+    
+            var circle_marker_8977afe458cb38b081b63a22d41aa7dd = L.circleMarker(
+                [37.22060301869712, -91.04935509167883],
+                {"bubblingMouseEvents": true, "color": "#31688e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31688e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.9206508061045415, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_ae280d711cb5b8b6ce51ace2911ae1c5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_eb63e70f9ce1d143ab3321561ff855b8 = $(`<div id="html_eb63e70f9ce1d143ab3321561ff855b8" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 28<br>     <b>RF prob:</b> 0.163<br>     <b>Bayes mean:</b> 0.085<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.068<br>     <b>Lon, Lat:</b> -91.0494, 37.2206     </div>`)[0];
+                popup_ae280d711cb5b8b6ce51ace2911ae1c5.setContent(html_eb63e70f9ce1d143ab3321561ff855b8);
+            
+        
+
+        circle_marker_8977afe458cb38b081b63a22d41aa7dd.bindPopup(popup_ae280d711cb5b8b6ce51ace2911ae1c5)
+        ;
+
+        
+    
+    
+            var circle_marker_54f1893e850553c49e61af29be91b951 = L.circleMarker(
+                [37.87060301869708, -92.19935509167878],
+                {"bubblingMouseEvents": true, "color": "#31688e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#31688e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.107092408640018, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_b2f404e4324cc7d78732fbbe79e4bf8b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f0fabb31ca8b933484aec0c49ab952a9 = $(`<div id="html_f0fabb31ca8b933484aec0c49ab952a9" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 29<br>     <b>RF prob:</b> 0.163<br>     <b>Bayes mean:</b> 0.112<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.019<br>     <b>Lon, Lat:</b> -92.1994, 37.8706     </div>`)[0];
+                popup_b2f404e4324cc7d78732fbbe79e4bf8b.setContent(html_f0fabb31ca8b933484aec0c49ab952a9);
+            
+        
+
+        circle_marker_54f1893e850553c49e61af29be91b951.bindPopup(popup_b2f404e4324cc7d78732fbbe79e4bf8b)
+        ;
+
+        
+    
+    
+            var circle_marker_de19146f0ac1d6822aacc3d9bd3a312a = L.circleMarker(
+                [37.5706030186971, -91.39935509167886],
+                {"bubblingMouseEvents": true, "color": "#3e4989", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3e4989", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.761340023705894, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_1c0c0da8838fdd8f40f16d9ddefdd2c6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6797adfaf762a2efdacf0dd981dd9f12 = $(`<div id="html_6797adfaf762a2efdacf0dd981dd9f12" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 30<br>     <b>RF prob:</b> 0.160<br>     <b>Bayes mean:</b> 0.105<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.030<br>     <b>Lon, Lat:</b> -91.3994, 37.5706     </div>`)[0];
+                popup_1c0c0da8838fdd8f40f16d9ddefdd2c6.setContent(html_6797adfaf762a2efdacf0dd981dd9f12);
+            
+        
+
+        circle_marker_de19146f0ac1d6822aacc3d9bd3a312a.bindPopup(popup_1c0c0da8838fdd8f40f16d9ddefdd2c6)
+        ;
+
+        
+    
+    
+            var circle_marker_8c7d083e363a5e4e13421c05b8415735 = L.circleMarker(
+                [37.87060301869708, -92.1493550916788],
+                {"bubblingMouseEvents": true, "color": "#3e4989", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3e4989", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.249511329912151, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_cb0a66dd463a957259b7482e56921a69 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8079d704fa36a0eabc798536996497a6 = $(`<div id="html_8079d704fa36a0eabc798536996497a6" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 31<br>     <b>RF prob:</b> 0.160<br>     <b>Bayes mean:</b> 0.114<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.022<br>     <b>Lon, Lat:</b> -92.1494, 37.8706     </div>`)[0];
+                popup_cb0a66dd463a957259b7482e56921a69.setContent(html_8079d704fa36a0eabc798536996497a6);
+            
+        
+
+        circle_marker_8c7d083e363a5e4e13421c05b8415735.bindPopup(popup_cb0a66dd463a957259b7482e56921a69)
+        ;
+
+        
+    
+    
+            var circle_marker_99a81c7b2eccb2a5821d73bb74179151 = L.circleMarker(
+                [38.62060301869704, -92.84935509167876],
+                {"bubblingMouseEvents": true, "color": "#481a6c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#481a6c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.427893257134673, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_9a5e689d9c5a6e33d7f145117fd58073 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1da01d116c03687920f527e3bf40f75b = $(`<div id="html_1da01d116c03687920f527e3bf40f75b" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 32<br>     <b>RF prob:</b> 0.157<br>     <b>Bayes mean:</b> 0.086<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.025<br>     <b>Lon, Lat:</b> -92.8494, 38.6206     </div>`)[0];
+                popup_9a5e689d9c5a6e33d7f145117fd58073.setContent(html_1da01d116c03687920f527e3bf40f75b);
+            
+        
+
+        circle_marker_99a81c7b2eccb2a5821d73bb74179151.bindPopup(popup_9a5e689d9c5a6e33d7f145117fd58073)
+        ;
+
+        
+    
+    
+            var circle_marker_d06a3760f92054b53e0e73b9c714d53c = L.circleMarker(
+                [36.67060301869715, -91.14935509167884],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.4169737902803163, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_448b8de1b83b34a36ac6f002914a0b80 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_db2e4f9e817a334d3f19d6db17a98c60 = $(`<div id="html_db2e4f9e817a334d3f19d6db17a98c60" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 33<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.077<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.007<br>     <b>Lon, Lat:</b> -91.1494, 36.6706     </div>`)[0];
+                popup_448b8de1b83b34a36ac6f002914a0b80.setContent(html_db2e4f9e817a334d3f19d6db17a98c60);
+            
+        
+
+        circle_marker_d06a3760f92054b53e0e73b9c714d53c.bindPopup(popup_448b8de1b83b34a36ac6f002914a0b80)
+        ;
+
+        
+    
+    
+            var circle_marker_a52cc536eb9de73a9e07eaae21493b92 = L.circleMarker(
+                [36.72060301869715, -91.8493550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_111b4258395ae992cf9f146318d1c267 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_da95c1070fa57d3c38ca9741bd8423a9 = $(`<div id="html_da95c1070fa57d3c38ca9741bd8423a9" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 34<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.096<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.000<br>     <b>Lon, Lat:</b> -91.8494, 36.7206     </div>`)[0];
+                popup_111b4258395ae992cf9f146318d1c267.setContent(html_da95c1070fa57d3c38ca9741bd8423a9);
+            
+        
+
+        circle_marker_a52cc536eb9de73a9e07eaae21493b92.bindPopup(popup_111b4258395ae992cf9f146318d1c267)
+        ;
+
+        
+    
+    
+            var circle_marker_c344dad29d9a38d9fa9dc8df95524997 = L.circleMarker(
+                [37.37060301869711, -91.34935509167885],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.214836697813072, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_0f1ffaaa980aa9a0f5a44284888f9e0e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c845f4bb34bf162b2b2b771dca89a3a1 = $(`<div id="html_c845f4bb34bf162b2b2b771dca89a3a1" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 35<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.087<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.038<br>     <b>Lon, Lat:</b> -91.3494, 37.3706     </div>`)[0];
+                popup_0f1ffaaa980aa9a0f5a44284888f9e0e.setContent(html_c845f4bb34bf162b2b2b771dca89a3a1);
+            
+        
+
+        circle_marker_c344dad29d9a38d9fa9dc8df95524997.bindPopup(popup_0f1ffaaa980aa9a0f5a44284888f9e0e)
+        ;
+
+        
+    
+    
+            var circle_marker_50bcc7248c18d7baff757ea36efcc37d = L.circleMarker(
+                [38.77060301869703, -92.0493550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.999999999942116, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_d903b14a229fffce4da7138e2dd7add0 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_19f0618d4c47729c2feedf34142d2d8b = $(`<div id="html_19f0618d4c47729c2feedf34142d2d8b" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 36<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.033<br>     <b>Bayes std:</b> 0.006<br>     <b>Score (p × (1-σ)):</b> 0.155<br>     <b>Lon, Lat:</b> -92.0494, 38.7706     </div>`)[0];
+                popup_d903b14a229fffce4da7138e2dd7add0.setContent(html_19f0618d4c47729c2feedf34142d2d8b);
+            
+        
+
+        circle_marker_50bcc7248c18d7baff757ea36efcc37d.bindPopup(popup_d903b14a229fffce4da7138e2dd7add0)
+        ;
+
+        
+    
+    
+            var circle_marker_099303d61eaa9401752dd377be27dc5c = L.circleMarker(
+                [40.02060301869696, -92.0493550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.543459141603148, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_ad58231461284425e22f4f6219890148 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_922ed43f18d3fd235390875834826e11 = $(`<div id="html_922ed43f18d3fd235390875834826e11" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 37<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.096<br>     <b>Bayes std:</b> 0.009<br>     <b>Score (p × (1-σ)):</b> 0.078<br>     <b>Lon, Lat:</b> -92.0494, 40.0206     </div>`)[0];
+                popup_ad58231461284425e22f4f6219890148.setContent(html_922ed43f18d3fd235390875834826e11);
+            
+        
+
+        circle_marker_099303d61eaa9401752dd377be27dc5c.bindPopup(popup_ad58231461284425e22f4f6219890148)
+        ;
+
+        
+    
+    
+            var circle_marker_f56e2acbe62644f55a6e62dc28fb628e = L.circleMarker(
+                [38.57060301869704, -92.19935509167878],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.357880880066936, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_a5052fc06c9632e716a4ba4dc9be29d1 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_f02212b699a7ac92c7eb04b1add7f09d = $(`<div id="html_f02212b699a7ac92c7eb04b1add7f09d" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 38<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.086<br>     <b>Bayes std:</b> 0.010<br>     <b>Score (p × (1-σ)):</b> 0.058<br>     <b>Lon, Lat:</b> -92.1994, 38.5706     </div>`)[0];
+                popup_a5052fc06c9632e716a4ba4dc9be29d1.setContent(html_f02212b699a7ac92c7eb04b1add7f09d);
+            
+        
+
+        circle_marker_f56e2acbe62644f55a6e62dc28fb628e.bindPopup(popup_a5052fc06c9632e716a4ba4dc9be29d1)
+        ;
+
+        
+    
+    
+            var circle_marker_4fe797236ea7e86048856d212ec002fb = L.circleMarker(
+                [37.92060301869708, -91.99935509167878],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.458686066984232, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_36b2d872242a33caea01dde6d6bbd8e4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6c32e8fe89034bf6ba8d1345142c9996 = $(`<div id="html_6c32e8fe89034bf6ba8d1345142c9996" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 39<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.120<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.042<br>     <b>Lon, Lat:</b> -91.9994, 37.9206     </div>`)[0];
+                popup_36b2d872242a33caea01dde6d6bbd8e4.setContent(html_6c32e8fe89034bf6ba8d1345142c9996);
+            
+        
+
+        circle_marker_4fe797236ea7e86048856d212ec002fb.bindPopup(popup_36b2d872242a33caea01dde6d6bbd8e4)
+        ;
+
+        
+    
+    
+            var circle_marker_8960dc493383cc54a47bfac097c17ae0 = L.circleMarker(
+                [39.570603018696985, -91.8993550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.470875927776886, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_cb5d3711b9da0ddf7ceff06268cb49b4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4d19a2c7e6ccf1b6f1e789539f9ecf50 = $(`<div id="html_4d19a2c7e6ccf1b6f1e789539f9ecf50" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 40<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.081<br>     <b>Bayes std:</b> 0.008<br>     <b>Score (p × (1-σ)):</b> 0.112<br>     <b>Lon, Lat:</b> -91.8994, 39.5706     </div>`)[0];
+                popup_cb5d3711b9da0ddf7ceff06268cb49b4.setContent(html_4d19a2c7e6ccf1b6f1e789539f9ecf50);
+            
+        
+
+        circle_marker_8960dc493383cc54a47bfac097c17ae0.bindPopup(popup_cb5d3711b9da0ddf7ceff06268cb49b4)
+        ;
+
+        
+    
+    
+            var circle_marker_4475a7afa95a8aecc1fcfc4c4a2cdf31 = L.circleMarker(
+                [36.770603018697145, -91.34935509167885],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.278093171300843, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_fd5e219dab6b219f652561339eb6fd2f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_94208bc064cf8f567bd828c64dbfeaae = $(`<div id="html_94208bc064cf8f567bd828c64dbfeaae" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 41<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.082<br>     <b>Bayes std:</b> 0.013<br>     <b>Score (p × (1-σ)):</b> 0.005<br>     <b>Lon, Lat:</b> -91.3494, 36.7706     </div>`)[0];
+                popup_fd5e219dab6b219f652561339eb6fd2f.setContent(html_94208bc064cf8f567bd828c64dbfeaae);
+            
+        
+
+        circle_marker_4475a7afa95a8aecc1fcfc4c4a2cdf31.bindPopup(popup_fd5e219dab6b219f652561339eb6fd2f)
+        ;
+
+        
+    
+    
+            var circle_marker_f164c14dc6ec8aa3b6bb40a1c1d4a07c = L.circleMarker(
+                [37.97060301869708, -91.7493550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.479222395843604, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_cb4178986a7fe68ba0a57e7567a3c605 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_36285d18b7c919f6a3dfe75ef34c8bd4 = $(`<div id="html_36285d18b7c919f6a3dfe75ef34c8bd4" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 42<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.100<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.026<br>     <b>Lon, Lat:</b> -91.7494, 37.9706     </div>`)[0];
+                popup_cb4178986a7fe68ba0a57e7567a3c605.setContent(html_36285d18b7c919f6a3dfe75ef34c8bd4);
+            
+        
+
+        circle_marker_f164c14dc6ec8aa3b6bb40a1c1d4a07c.bindPopup(popup_cb4178986a7fe68ba0a57e7567a3c605)
+        ;
+
+        
+    
+    
+            var circle_marker_7c6b69b51347dbc693a4967a25f89d44 = L.circleMarker(
+                [38.72060301869704, -91.8993550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.63586707019349, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_7761eda0546d88df8dc662842b6281fc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a8ae6a8df200750daca56c9998b39d4d = $(`<div id="html_a8ae6a8df200750daca56c9998b39d4d" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 43<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.063<br>     <b>Bayes std:</b> 0.008<br>     <b>Score (p × (1-σ)):</b> 0.097<br>     <b>Lon, Lat:</b> -91.8994, 38.7206     </div>`)[0];
+                popup_7761eda0546d88df8dc662842b6281fc.setContent(html_a8ae6a8df200750daca56c9998b39d4d);
+            
+        
+
+        circle_marker_7c6b69b51347dbc693a4967a25f89d44.bindPopup(popup_7761eda0546d88df8dc662842b6281fc)
+        ;
+
+        
+    
+    
+            var circle_marker_405ec538b374ab0947964cbb9e3983da = L.circleMarker(
+                [38.02060301869708, -91.39935509167886],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.090174911078193, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_61af35f8460b1d939b97b24fea1f0dcb = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_53a3b0c1fb8722947a4ae5b07bf4b568 = $(`<div id="html_53a3b0c1fb8722947a4ae5b07bf4b568" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 44<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.136<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.053<br>     <b>Lon, Lat:</b> -91.3994, 38.0206     </div>`)[0];
+                popup_61af35f8460b1d939b97b24fea1f0dcb.setContent(html_53a3b0c1fb8722947a4ae5b07bf4b568);
+            
+        
+
+        circle_marker_405ec538b374ab0947964cbb9e3983da.bindPopup(popup_61af35f8460b1d939b97b24fea1f0dcb)
+        ;
+
+        
+    
+    
+            var circle_marker_c3f22034efa9fea71b928706a9e4a82c = L.circleMarker(
+                [38.67060301869704, -91.8993550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.1804145860889, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_64abb61e394aa6fa64835ec5e64435c8 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_216e4b89339427c6c045289dfbfb5188 = $(`<div id="html_216e4b89339427c6c045289dfbfb5188" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 45<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.106<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.055<br>     <b>Lon, Lat:</b> -91.8994, 38.6706     </div>`)[0];
+                popup_64abb61e394aa6fa64835ec5e64435c8.setContent(html_216e4b89339427c6c045289dfbfb5188);
+            
+        
+
+        circle_marker_c3f22034efa9fea71b928706a9e4a82c.bindPopup(popup_64abb61e394aa6fa64835ec5e64435c8)
+        ;
+
+        
+    
+    
+            var circle_marker_bd49c7a4188bdf1c724f112450ebd9d7 = L.circleMarker(
+                [39.570603018696985, -91.7493550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.852721251616071, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_bc360a529a7d93377bcb349c1a3419a4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ae1eb05e0c3381762f10a3d54a370e85 = $(`<div id="html_ae1eb05e0c3381762f10a3d54a370e85" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 46<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.055<br>     <b>Bayes std:</b> 0.007<br>     <b>Score (p × (1-σ)):</b> 0.118<br>     <b>Lon, Lat:</b> -91.7494, 39.5706     </div>`)[0];
+                popup_bc360a529a7d93377bcb349c1a3419a4.setContent(html_ae1eb05e0c3381762f10a3d54a370e85);
+            
+        
+
+        circle_marker_bd49c7a4188bdf1c724f112450ebd9d7.bindPopup(popup_bc360a529a7d93377bcb349c1a3419a4)
+        ;
+
+        
+    
+    
+            var circle_marker_b036be6fd27c4ee2c561fb0d38c90a99 = L.circleMarker(
+                [38.170603018697065, -91.99935509167878],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.563713795426161, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_1434df0abaf4a5b3af5a2ebd83e548d7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_535259be588503820643441eff25bfc6 = $(`<div id="html_535259be588503820643441eff25bfc6" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 47<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.118<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.027<br>     <b>Lon, Lat:</b> -91.9994, 38.1706     </div>`)[0];
+                popup_1434df0abaf4a5b3af5a2ebd83e548d7.setContent(html_535259be588503820643441eff25bfc6);
+            
+        
+
+        circle_marker_b036be6fd27c4ee2c561fb0d38c90a99.bindPopup(popup_1434df0abaf4a5b3af5a2ebd83e548d7)
+        ;
+
+        
+    
+    
+            var circle_marker_d1bc5d691e2d1e8443cca5a02700b66b = L.circleMarker(
+                [38.37060301869706, -91.99935509167878],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.337803595143582, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_518486f9eff157f021e5c9d431f4926c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b49d195206ef125cecccbb03fbd5cd25 = $(`<div id="html_b49d195206ef125cecccbb03fbd5cd25" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 48<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.128<br>     <b>Bayes std:</b> 0.011<br>     <b>Score (p × (1-σ)):</b> 0.040<br>     <b>Lon, Lat:</b> -91.9994, 38.3706     </div>`)[0];
+                popup_518486f9eff157f021e5c9d431f4926c.setContent(html_b49d195206ef125cecccbb03fbd5cd25);
+            
+        
+
+        circle_marker_d1bc5d691e2d1e8443cca5a02700b66b.bindPopup(popup_518486f9eff157f021e5c9d431f4926c)
+        ;
+
+        
+    
+    
+            var circle_marker_03951b4e653599a4930a25d27218666b = L.circleMarker(
+                [39.07060301869702, -91.69935509167884],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.967309771287695, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_648016949bf800c2332d5c818cf9d90b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fe16d06623db1ebc9f721e80c4acefb1 = $(`<div id="html_fe16d06623db1ebc9f721e80c4acefb1" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 49<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.047<br>     <b>Bayes std:</b> 0.007<br>     <b>Score (p × (1-σ)):</b> 0.120<br>     <b>Lon, Lat:</b> -91.6994, 39.0706     </div>`)[0];
+                popup_648016949bf800c2332d5c818cf9d90b.setContent(html_fe16d06623db1ebc9f721e80c4acefb1);
+            
+        
+
+        circle_marker_03951b4e653599a4930a25d27218666b.bindPopup(popup_648016949bf800c2332d5c818cf9d90b)
+        ;
+
+        
+    
+    
+            var circle_marker_aac9a207e86338c9fd6a76ca7d141f76 = L.circleMarker(
+                [39.270603018697, -91.7493550916788],
+                {"bubblingMouseEvents": true, "color": "#440154", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#440154", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.166435295428084, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf);
+        
+    
+        var popup_17ae78ecc40e6bbc1b59d12588082062 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_11d3b5b3468c7e5f301d636a3f3a58e6 = $(`<div id="html_11d3b5b3468c7e5f301d636a3f3a58e6" style="width: 100.0%; height: 100.0%;">     <b>Rank:</b> 50<br>     <b>RF prob:</b> 0.155<br>     <b>Bayes mean:</b> 0.050<br>     <b>Bayes std:</b> 0.012<br>     <b>Score (p × (1-σ)):</b> 0.020<br>     <b>Lon, Lat:</b> -91.7494, 39.2706     </div>`)[0];
+                popup_17ae78ecc40e6bbc1b59d12588082062.setContent(html_11d3b5b3468c7e5f301d636a3f3a58e6);
+            
+        
+
+        circle_marker_aac9a207e86338c9fd6a76ca7d141f76.bindPopup(popup_17ae78ecc40e6bbc1b59d12588082062)
+        ;
+
+        
+    
+    
+            marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf.addTo(map_731d32a9e827fa36a22c71107f541863);
+        
+    
+    var color_map_db0b1ad63f461024bb7b32ed1fe8f811 = {};
+
+    
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.color = d3.scale.threshold()
+              .domain([0.1554836381678356, 0.1555281227413783, 0.15557260731492098, 0.15561709188846368, 0.15566157646200637, 0.15570606103554907, 0.15575054560909174, 0.15579503018263444, 0.15583951475617713, 0.15588399932971983, 0.1559284839032625, 0.1559729684768052, 0.1560174530503479, 0.1560619376238906, 0.15610642219743326, 0.15615090677097596, 0.15619539134451865, 0.15623987591806135, 0.15628436049160402, 0.15632884506514672, 0.1563733296386894, 0.1564178142122321, 0.15646229878577478, 0.15650678335931748, 0.15655126793286017, 0.15659575250640287, 0.15664023707994554, 0.15668472165348823, 0.15672920622703093, 0.15677369080057363, 0.1568181753741163, 0.156862659947659, 0.1569071445212017, 0.1569516290947444, 0.15699611366828706, 0.15704059824182975, 0.15708508281537245, 0.15712956738891515, 0.15717405196245782, 0.1572185365360005, 0.1572630211095432, 0.15730750568308588, 0.15735199025662858, 0.15739647483017127, 0.15744095940371397, 0.15748544397725664, 0.15752992855079934, 0.15757441312434203, 0.15761889769788473, 0.1576633822714274, 0.1577078668449701, 0.1577523514185128, 0.1577968359920555, 0.15784132056559816, 0.15788580513914086, 0.15793028971268355, 0.15797477428622625, 0.15801925885976892, 0.15806374343331162, 0.1581082280068543, 0.158152712580397, 0.15819719715393968, 0.15824168172748238, 0.15828616630102507, 0.15833065087456777, 0.15837513544811044, 0.15841962002165313, 0.15846410459519583, 0.15850858916873853, 0.1585530737422812, 0.1585975583158239, 0.1586420428893666, 0.1586865274629093, 0.15873101203645196, 0.15877549660999465, 0.15881998118353735, 0.15886446575708002, 0.15890895033062272, 0.1589534349041654, 0.1589979194777081, 0.15904240405125078, 0.15908688862479348, 0.15913137319833617, 0.15917585777187887, 0.15922034234542154, 0.15926482691896424, 0.15930931149250693, 0.15935379606604963, 0.1593982806395923, 0.159442765213135, 0.1594872497866777, 0.1595317343602204, 0.15957621893376306, 0.15962070350730576, 0.15966518808084845, 0.15970967265439115, 0.15975415722793382, 0.15979864180147652, 0.1598431263750192, 0.1598876109485619, 0.15993209552210458, 0.15997658009564727, 0.16002106466918997, 0.16006554924273267, 0.16011003381627534, 0.16015451838981803, 0.16019900296336073, 0.16024348753690343, 0.1602879721104461, 0.1603324566839888, 0.1603769412575315, 0.1604214258310742, 0.16046591040461686, 0.16051039497815955, 0.16055487955170225, 0.16059936412524495, 0.16064384869878762, 0.1606883332723303, 0.160732817845873, 0.16077730241941568, 0.16082178699295838, 0.16086627156650107, 0.16091075614004377, 0.16095524071358644, 0.16099972528712914, 0.16104420986067183, 0.16108869443421453, 0.1611331790077572, 0.1611776635812999, 0.1612221481548426, 0.1612666327283853, 0.16131111730192796, 0.16135560187547066, 0.16140008644901335, 0.16144457102255605, 0.16148905559609872, 0.16153354016964142, 0.1615780247431841, 0.1616225093167268, 0.16166699389026948, 0.16171147846381217, 0.16175596303735487, 0.16180044761089757, 0.16184493218444024, 0.16188941675798293, 0.16193390133152563, 0.16197838590506833, 0.162022870478611, 0.1620673550521537, 0.1621118396256964, 0.1621563241992391, 0.16220080877278176, 0.16224529334632445, 0.16228977791986715, 0.16233426249340982, 0.16237874706695252, 0.1624232316404952, 0.1624677162140379, 0.16251220078758058, 0.16255668536112328, 0.16260116993466597, 0.16264565450820867, 0.16269013908175134, 0.16273462365529404, 0.16277910822883673, 0.16282359280237943, 0.1628680773759221, 0.1629125619494648, 0.1629570465230075, 0.1630015310965502, 0.16304601567009286, 0.16309050024363556, 0.16313498481717825, 0.16317946939072095, 0.16322395396426362, 0.16326843853780632, 0.163312923111349, 0.1633574076848917, 0.16340189225843438, 0.16344637683197707, 0.16349086140551977, 0.16353534597906247, 0.16357983055260514, 0.16362431512614783, 0.16366879969969053, 0.16371328427323323, 0.1637577688467759, 0.1638022534203186, 0.1638467379938613, 0.163891222567404, 0.16393570714094666, 0.16398019171448935, 0.16402467628803205, 0.16406916086157472, 0.16411364543511742, 0.1641581300086601, 0.1642026145822028, 0.16424709915574548, 0.16429158372928818, 0.16433606830283087, 0.16438055287637357, 0.16442503744991624, 0.16446952202345894, 0.16451400659700163, 0.16455849117054433, 0.164602975744087, 0.1646474603176297, 0.1646919448911724, 0.1647364294647151, 0.16478091403825776, 0.16482539861180046, 0.16486988318534315, 0.16491436775888585, 0.16495885233242852, 0.16500333690597122, 0.1650478214795139, 0.1650923060530566, 0.16513679062659928, 0.16518127520014197, 0.16522575977368467, 0.16527024434722737, 0.16531472892077004, 0.16535921349431273, 0.16540369806785543, 0.16544818264139813, 0.1654926672149408, 0.1655371517884835, 0.1655816363620262, 0.1656261209355689, 0.16567060550911156, 0.16571509008265425, 0.16575957465619695, 0.16580405922973962, 0.16584854380328232, 0.165893028376825, 0.1659375129503677, 0.1659819975239104, 0.16602648209745308, 0.16607096667099577, 0.16611545124453847, 0.16615993581808114, 0.16620442039162384, 0.16624890496516653, 0.16629338953870923, 0.1663378741122519, 0.1663823586857946, 0.1664268432593373, 0.16647132783288, 0.16651581240642266, 0.16656029697996536, 0.16660478155350805, 0.16664926612705075, 0.16669375070059342, 0.16673823527413612, 0.1667827198476788, 0.1668272044212215, 0.16687168899476418, 0.16691617356830687, 0.16696065814184957, 0.16700514271539227, 0.16704962728893494, 0.16709411186247763, 0.16713859643602033, 0.16718308100956303, 0.1672275655831057, 0.1672720501566484, 0.1673165347301911, 0.16736101930373376, 0.16740550387727646, 0.16744998845081915, 0.16749447302436185, 0.16753895759790455, 0.16758344217144722, 0.1676279267449899, 0.1676724113185326, 0.16771689589207528, 0.16776138046561798, 0.16780586503916067, 0.16785034961270337, 0.16789483418624604, 0.16793931875978874, 0.16798380333333143, 0.16802828790687413, 0.1680727724804168, 0.1681172570539595, 0.1681617416275022, 0.1682062262010449, 0.16825071077458756, 0.16829519534813026, 0.16833967992167295, 0.16838416449521565, 0.16842864906875832, 0.16847313364230102, 0.1685176182158437, 0.1685621027893864, 0.16860658736292908, 0.16865107193647177, 0.16869555651001447, 0.16874004108355717, 0.16878452565709984, 0.16882901023064253, 0.16887349480418523, 0.16891797937772793, 0.1689624639512706, 0.1690069485248133, 0.169051433098356, 0.1690959176718987, 0.16914040224544136, 0.16918488681898405, 0.16922937139252675, 0.16927385596606942, 0.16931834053961212, 0.1693628251131548, 0.1694073096866975, 0.16945179426024018, 0.16949627883378288, 0.16954076340732557, 0.16958524798086827, 0.16962973255441094, 0.16967421712795364, 0.16971870170149633, 0.16976318627503903, 0.1698076708485817, 0.1698521554221244, 0.1698966399956671, 0.1699411245692098, 0.16998560914275246, 0.17003009371629516, 0.17007457828983785, 0.17011906286338055, 0.17016354743692322, 0.17020803201046592, 0.1702525165840086, 0.1702970011575513, 0.17034148573109398, 0.17038597030463667, 0.17043045487817937, 0.17047493945172207, 0.17051942402526474, 0.17056390859880743, 0.17060839317235013, 0.17065287774589283, 0.1706973623194355, 0.1707418468929782, 0.1707863314665209, 0.17083081604006356, 0.17087530061360626, 0.17091978518714895, 0.17096426976069165, 0.17100875433423435, 0.17105323890777702, 0.1710977234813197, 0.1711422080548624, 0.17118669262840508, 0.17123117720194778, 0.17127566177549047, 0.17132014634903317, 0.17136463092257584, 0.17140911549611854, 0.17145360006966123, 0.17149808464320393, 0.1715425692167466, 0.1715870537902893, 0.171631538363832, 0.1716760229373747, 0.17172050751091736, 0.17176499208446006, 0.17180947665800275, 0.17185396123154545, 0.17189844580508812, 0.17194293037863081, 0.1719874149521735, 0.17203189952571618, 0.17207638409925888, 0.17212086867280157, 0.17216535324634427, 0.17220983781988697, 0.17225432239342964, 0.17229880696697233, 0.17234329154051503, 0.1723877761140577, 0.1724322606876004, 0.1724767452611431, 0.1725212298346858, 0.1725657144082285, 0.17261019898177116, 0.17265468355531385, 0.17269916812885655, 0.17274365270239922, 0.17278813727594192, 0.1728326218494846, 0.1728771064230273, 0.17292159099657, 0.17296607557011268, 0.17301056014365537, 0.17305504471719807, 0.17309952929074074, 0.17314401386428344, 0.17318849843782613, 0.17323298301136883, 0.1732774675849115, 0.1733219521584542, 0.1733664367319969, 0.1734109213055396, 0.17345540587908226, 0.17349989045262496, 0.17354437502616765, 0.17358885959971032, 0.17363334417325302, 0.17367782874679571, 0.1737223133203384, 0.1737667978938811, 0.17381128246742378, 0.17385576704096647, 0.17390025161450917, 0.17394473618805184, 0.17398922076159454, 0.17403370533513723, 0.17407818990867993, 0.17412267448222263, 0.1741671590557653, 0.174211643629308, 0.1742561282028507, 0.17430061277639336, 0.17434509734993606, 0.17438958192347875, 0.17443406649702145, 0.17447855107056415, 0.17452303564410682, 0.1745675202176495, 0.1746120047911922, 0.17465648936473488, 0.17470097393827758, 0.17474545851182027, 0.17478994308536297, 0.17483442765890564, 0.17487891223244834, 0.17492339680599103, 0.17496788137953373, 0.1750123659530764, 0.1750568505266191, 0.1751013351001618, 0.1751458196737045, 0.17519030424724716, 0.17523478882078986, 0.17527927339433255, 0.17532375796787525, 0.17536824254141792, 0.17541272711496061, 0.1754572116885033, 0.17550169626204598, 0.17554618083558868, 0.17559066540913137, 0.17563514998267407, 0.17567963455621677, 0.17572411912975944, 0.17576860370330213, 0.17581308827684483, 0.1758575728503875, 0.1759020574239302, 0.1759465419974729, 0.1759910265710156, 0.1760355111445583, 0.17607999571810096, 0.17612448029164365, 0.17616896486518635, 0.17621344943872902, 0.17625793401227172, 0.1763024185858144, 0.1763469031593571, 0.17639138773289978, 0.17643587230644248, 0.17648035687998517, 0.17652484145352787, 0.17656932602707054, 0.17661381060061324, 0.17665829517415593, 0.17670277974769863, 0.1767472643212413, 0.176791748894784, 0.1768362334683267, 0.1768807180418694, 0.17692520261541206, 0.17696968718895476, 0.17701417176249745, 0.17705865633604015, 0.17710314090958282, 0.17714762548312551, 0.1771921100566682, 0.1772365946302109, 0.17728107920375358, 0.17732556377729627, 0.17737004835083897, 0.17741453292438167, 0.17745901749792434, 0.17750350207146703, 0.17754798664500973, 0.17759247121855243, 0.1776369557920951, 0.1776814403656378])
+              .range(['#440154ff', '#440155ff', '#440256ff', '#440356ff', '#450457ff', '#450458ff', '#450559ff', '#450659ff', '#46075aff', '#46075bff', '#46085cff', '#46095cff', '#460a5dff', '#460a5eff', '#460b5eff', '#460c5fff', '#470d60ff', '#470d61ff', '#470e61ff', '#470f62ff', '#471063ff', '#471064ff', '#471164ff', '#471265ff', '#471365ff', '#481366ff', '#481467ff', '#481568ff', '#481668ff', '#481669ff', '#481769ff', '#48176aff', '#48186bff', '#48196cff', '#481a6cff', '#481a6dff', '#481b6dff', '#481c6eff', '#481c6eff', '#481d6fff', '#481d6fff', '#481f70ff', '#481f70ff', '#482071ff', '#482072ff', '#482173ff', '#482273ff', '#482374ff', '#482374ff', '#482475ff', '#482476ff', '#482576ff', '#482577ff', '#482677ff', '#482778ff', '#482878ff', '#482879ff', '#482979ff', '#47297aff', '#472a7aff', '#472b7aff', '#472c7aff', '#472c7bff', '#472d7bff', '#472d7cff', '#472e7cff', '#472e7dff', '#472f7dff', '#462f7eff', '#46307eff', '#46317eff', '#46327eff', '#46327fff', '#46337fff', '#463480ff', '#453480ff', '#453581ff', '#453581ff', '#453681ff', '#453781ff', '#453882ff', '#443882ff', '#443983ff', '#443983ff', '#443a83ff', '#443a83ff', '#443b84ff', '#433c84ff', '#433d84ff', '#433d85ff', '#433e85ff', '#423e85ff', '#423f85ff', '#423f86ff', '#424086ff', '#424086ff', '#424186ff', '#414187ff', '#414287ff', '#414387ff', '#414487ff', '#404488ff', '#404588ff', '#404588ff', '#404688ff', '#3f4688ff', '#3f4788ff', '#3f4789ff', '#3f4889ff', '#3e4889ff', '#3e4989ff', '#3e4a89ff', '#3e4a89ff', '#3e4b8aff', '#3d4c8aff', '#3d4d8aff', '#3d4d8aff', '#3d4e8aff', '#3c4e8aff', '#3c4f8aff', '#3c4f8aff', '#3c508bff', '#3b508bff', '#3b518bff', '#3b518bff', '#3b528bff', '#3a528bff', '#3a538bff', '#3a538bff', '#3a548cff', '#39548cff', '#39558cff', '#39558cff', '#39568cff', '#38578cff', '#38588cff', '#38588cff', '#38598cff', '#37598cff', '#375a8cff', '#375a8dff', '#375b8dff', '#365b8dff', '#365c8dff', '#365c8dff', '#365d8dff', '#355d8dff', '#355e8dff', '#355f8dff', '#355f8dff', '#34608dff', '#34608dff', '#34618dff', '#34618dff', '#33628dff', '#33628dff', '#33638dff', '#32638dff', '#32648eff', '#32648eff', '#32658eff', '#31658eff', '#31668eff', '#31668eff', '#31678eff', '#31678eff', '#31688eff', '#30688eff', '#30698eff', '#30698eff', '#306a8eff', '#2f6a8eff', '#2f6b8eff', '#2f6b8eff', '#2f6c8eff', '#2e6c8eff', '#2e6d8eff', '#2e6d8eff', '#2e6e8eff', '#2e6e8eff', '#2e6f8eff', '#2d6f8eff', '#2d708eff', '#2d708eff', '#2d718eff', '#2c718eff', '#2c718eff', '#2c728eff', '#2c728eff', '#2c738eff', '#2c738eff', '#2b748eff', '#2b748eff', '#2b758eff', '#2b758eff', '#2a768eff', '#2a768eff', '#2a778eff', '#2a778eff', '#2a788eff', '#29788eff', '#29798eff', '#29798eff', '#297a8eff', '#297a8eff', '#297b8eff', '#287b8eff', '#287c8eff', '#287c8eff', '#287d8eff', '#277d8eff', '#277e8eff', '#277e8eff', '#277f8eff', '#277f8eff', '#27808eff', '#26808eff', '#26818eff', '#26818eff', '#26828eff', '#26828eff', '#26828eff', '#25828eff', '#25838eff', '#25838eff', '#25848eff', '#25858eff', '#25858eff', '#24868eff', '#24868eff', '#24878eff', '#24878eff', '#23888eff', '#23888eff', '#23898eff', '#23898eff', '#238a8dff', '#238a8dff', '#228b8dff', '#228b8dff', '#228c8dff', '#228c8dff', '#228d8dff', '#218d8dff', '#218e8dff', '#218e8dff', '#218f8dff', '#218f8dff', '#21908dff', '#21908dff', '#21918cff', '#20918cff', '#20928cff', '#20928cff', '#20928cff', '#20928cff', '#20938cff', '#1f938cff', '#1f948cff', '#1f948cff', '#1f958bff', '#1f958bff', '#1f968bff', '#1f968bff', '#1f978bff', '#1f988bff', '#1f988bff', '#1f998bff', '#1f998aff', '#1f9a8aff', '#1f9a8aff', '#1e9b8aff', '#1e9b8aff', '#1e9c8aff', '#1e9c89ff', '#1e9d89ff', '#1e9d89ff', '#1e9e89ff', '#1f9e89ff', '#1f9f88ff', '#1f9f88ff', '#1fa088ff', '#1fa088ff', '#1fa188ff', '#1fa188ff', '#1fa187ff', '#1fa187ff', '#1fa287ff', '#1fa287ff', '#1fa386ff', '#20a386ff', '#20a486ff', '#20a486ff', '#20a585ff', '#21a585ff', '#21a685ff', '#21a685ff', '#21a785ff', '#22a785ff', '#22a884ff', '#22a884ff', '#22a983ff', '#23a983ff', '#23aa83ff', '#24ab83ff', '#25ab82ff', '#25ac82ff', '#25ac82ff', '#25ad82ff', '#26ad81ff', '#26ad81ff', '#27ad81ff', '#27ae81ff', '#28ae80ff', '#28af80ff', '#29af7fff', '#29b07fff', '#2ab07fff', '#2bb17eff', '#2cb17eff', '#2cb27dff', '#2db27dff', '#2db37cff', '#2eb37cff', '#2eb47cff', '#2fb47cff', '#30b57bff', '#31b57bff', '#31b67aff', '#32b67aff', '#33b679ff', '#34b679ff', '#34b779ff', '#35b779ff', '#36b878ff', '#37b878ff', '#37b977ff', '#38b977ff', '#39ba76ff', '#3aba76ff', '#3abb75ff', '#3bbb75ff', '#3cbc74ff', '#3dbc74ff', '#3ebc73ff', '#3fbd73ff', '#40bd72ff', '#40be72ff', '#41be71ff', '#42bf71ff', '#43bf70ff', '#45c070ff', '#46c06fff', '#47c16fff', '#48c16eff', '#49c16eff', '#4ac16dff', '#4bc26cff', '#4cc26cff', '#4dc36bff', '#4ec36bff', '#4fc46aff', '#50c46aff', '#51c569ff', '#52c569ff', '#53c568ff', '#54c568ff', '#55c667ff', '#56c667ff', '#57c766ff', '#58c765ff', '#59c864ff', '#5ac864ff', '#5bc863ff', '#5cc863ff', '#5dc962ff', '#5ec962ff', '#5fca61ff', '#60ca60ff', '#62cb5fff', '#63cb5fff', '#64cb5eff', '#65cc5dff', '#66cc5cff', '#67cd5cff', '#68cd5bff', '#6acd5bff', '#6bcd5aff', '#6cce59ff', '#6ece58ff', '#6fcf58ff', '#70cf57ff', '#71d057ff', '#72d056ff', '#74d055ff', '#75d054ff', '#76d153ff', '#77d153ff', '#78d152ff', '#7ad151ff', '#7bd250ff', '#7cd250ff', '#7dd34fff', '#7fd34eff', '#80d34dff', '#81d34dff', '#82d44cff', '#84d44bff', '#85d54aff', '#86d549ff', '#88d548ff', '#89d548ff', '#8ad647ff', '#8bd646ff', '#8dd645ff', '#8ed645ff', '#8fd744ff', '#90d743ff', '#92d742ff', '#93d741ff', '#94d840ff', '#96d83fff', '#97d83eff', '#99d93dff', '#9ad93cff', '#9bd93cff', '#9dd93bff', '#9eda3aff', '#9fda39ff', '#a1da38ff', '#a2da37ff', '#a3db36ff', '#a4db36ff', '#a6db35ff', '#a8db34ff', '#a9dc33ff', '#aadc32ff', '#abdc31ff', '#addc30ff', '#aedd2fff', '#b0dd2fff', '#b1dd2eff', '#b2dd2dff', '#b3de2cff', '#b5de2bff', '#b6de2aff', '#b8de29ff', '#b9de28ff', '#bade28ff', '#bcdf27ff', '#bddf26ff', '#bfdf25ff', '#c0df25ff', '#c1df24ff', '#c2df23ff', '#c4e022ff', '#c5e021ff', '#c7e020ff', '#c8e020ff', '#c9e11fff', '#cbe11eff', '#cce11dff', '#cee11dff', '#cfe11cff', '#d1e11bff', '#d2e21bff', '#d3e21aff', '#d4e21aff', '#d6e219ff', '#d7e219ff', '#d9e319ff', '#dae319ff', '#dbe318ff', '#dde318ff', '#dee318ff', '#dfe318ff', '#e0e418ff', '#e2e418ff', '#e3e418ff', '#e5e418ff', '#e6e419ff', '#e7e419ff', '#e8e519ff', '#eae519ff', '#ebe51aff', '#ece51aff', '#ede51bff', '#efe51bff', '#f0e51cff', '#f1e51dff', '#f3e61dff', '#f4e61eff', '#f5e61eff', '#f6e61fff', '#f7e620ff', '#f8e621ff', '#fae722ff', '#fbe723ff', '#fce724ff', '#fde725ff']);
+    
+
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.x = d3.scale.linear()
+              .domain([0.1554836381678356, 0.1776814403656378])
+              .range([0, 450 - 50]);
+
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.legend = L.control({position: 'topright'});
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.legend.addTo(map_731d32a9e827fa36a22c71107f541863);
+
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.xAxis = d3.svg.axis()
+        .scale(color_map_db0b1ad63f461024bb7b32ed1fe8f811.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([0.1554836381678356, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.15774694348996446, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.1600102488120933, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.16227355413422218, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.16453685945635102, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.16680016477847986, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.1690634701006087, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.17132677542273755, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.17359008074486643, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0.17585338606699527, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
+
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.g = color_map_db0b1ad63f461024bb7b32ed1fe8f811.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.g.selectAll("rect")
+        .data(color_map_db0b1ad63f461024bb7b32ed1fe8f811.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_db0b1ad63f461024bb7b32ed1fe8f811.x(color_map_db0b1ad63f461024bb7b32ed1fe8f811.color.domain()[i - 1]) : color_map_db0b1ad63f461024bb7b32ed1fe8f811.x.range()[0],
+            x1: i < color_map_db0b1ad63f461024bb7b32ed1fe8f811.color.domain().length ? color_map_db0b1ad63f461024bb7b32ed1fe8f811.x(color_map_db0b1ad63f461024bb7b32ed1fe8f811.color.domain()[i]) : color_map_db0b1ad63f461024bb7b32ed1fe8f811.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_db0b1ad63f461024bb7b32ed1fe8f811.g.call(color_map_db0b1ad63f461024bb7b32ed1fe8f811.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("RF probability");
+    
+            var layer_control_452f672b3d2b89ed3443b6796cce2a21_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_8d20fb42464187824ee8d4a992740475,
+                },
+                overlays :  {
+                    "Top targets" : marker_cluster_ed0599a2f7c043bad9beea4ffade5eaf,
+                },
+            };
+            let layer_control_452f672b3d2b89ed3443b6796cce2a21 = L.control.layers(
+                layer_control_452f672b3d2b89ed3443b6796cce2a21_layers.base_layers,
+                layer_control_452f672b3d2b89ed3443b6796cce2a21_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_731d32a9e827fa36a22c71107f541863);
+
+        
+</script>
+</html>

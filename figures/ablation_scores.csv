@@ -1,13 +1,13 @@
 variant,cv,roc_auc,pr_auc
-coords+geo+grav+grad+geochem+mag,spatial-LOBO(4x4) used_blocks=16,0.6345470581964828,0.5528824909057409
-coords+geo+grav+grad,spatial-LOBO(4x4) used_blocks=16,0.6183281723317086,0.5325749581392177
-coords+geo+grav+grad+geochem,spatial-LOBO(4x4) used_blocks=16,0.6130695037850329,0.5309006834083673
-coords+geo+grav,spatial-LOBO(4x4) used_blocks=16,0.6057859541380985,0.5239552190464205
-coords+geo,spatial-LOBO(4x4) used_blocks=16,0.5931275683615077,0.5036286994225414
-coords,spatial-LOBO(4x4) used_blocks=16,0.5826893030639122,0.4966344098221866
-coords+geo+grav+grad+geochem+mag,stratified-5x,0.7862109765817886,0.7231632147663456
-coords+geo+grav+grad,stratified-5x,0.7821011147809629,0.7194635718467035
-coords+geo+grav+grad+geochem,stratified-5x,0.7800904203042089,0.71845954555721
-coords+geo+grav,stratified-5x,0.7770354457744725,0.7110643606317155
-coords,stratified-5x,0.774343630589659,0.7125030478344769
-coords+geo,stratified-5x,0.7692360499728915,0.6978387027709523
+coords+geo+grav+grad,spatial-LOBO(4x4) used_blocks=16,0.6208265680813633,0.14780750121030525
+coords+geo+grav+grad+geochem+mag,spatial-LOBO(4x4) used_blocks=16,0.620358296990587,0.14753291731852444
+coords+geo+grav+grad+geochem,spatial-LOBO(4x4) used_blocks=16,0.6131443476413079,0.13821089962683114
+coords+geo+grav,spatial-LOBO(4x4) used_blocks=16,0.6047539784845057,0.137036939486721
+coords+geo,spatial-LOBO(4x4) used_blocks=16,0.5968090773264265,0.13404378051137805
+coords,spatial-LOBO(4x4) used_blocks=16,0.5486635949795169,0.11352391861771337
+coords+geo+grav+grad+geochem+mag,stratified-5x,0.7311852861101136,0.2706081560770184
+coords,stratified-5x,0.7231267960561284,0.2562934316066582
+coords+geo+grav+grad,stratified-5x,0.7195417980867148,0.26069265410454256
+coords+geo+grav+grad+geochem,stratified-5x,0.7191944279292938,0.2615213472252944
+coords+geo+grav,stratified-5x,0.7175292706705821,0.25763571671673235
+coords+geo,stratified-5x,0.7106496863764852,0.24197540117429717
